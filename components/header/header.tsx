@@ -13,7 +13,7 @@ const Header = () => {
   useEffect(() => {
     const _classList = [];
 
-    if (scroll.y > 150 && scroll.y - scroll.lastY > 0)
+    if (scroll.y > 80 && scroll.y - scroll.lastY > 0)
       _classList.push("nav-bar--hidden");
 
     setNavClassList(_classList);

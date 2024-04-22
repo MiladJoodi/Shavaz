@@ -17,14 +17,12 @@ nav {
   box-shadow: 0 4px 9px #4242421a;
   transition: transform 250ms ease-in-out;
   border-bottom: 1px solid #ddd;
+  z-index: 10;
+  background-color: white;
 }
 
 nav.nav-bar--hidden {
   transform: translateY(-100%);
-}
-
-main {
-  padding: 2em;
 }
 
 /* header */
@@ -32,3 +30,27 @@ input{
   font-family: inherit;
 }
 
+
+/* Slider */
+.swiper {
+  width: 100%;
+  height: 400px
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

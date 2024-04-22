@@ -5,7 +5,8 @@ import "./globals.css";
 const vazirmatn = Vazirmatn({ subsets: ["latin"] });
 
 import type { Viewport } from 'next'
- 
+import Header from "@/components/header/header";
+
 export const viewport: Viewport = {
   themeColor: '#d72685',
 }
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={vazirmatn.className}>{children}</body>
+      <body className={vazirmatn.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

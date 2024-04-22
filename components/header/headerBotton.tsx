@@ -42,6 +42,7 @@ const HeaderBotton = () => {
                     <Link
                         href={item.url}
                         className="flex gap-2"
+                        key={index}
                     >
                         {item.icon}
                         {item.title}
