@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Header */
+main {
+  margin: 0;
+  height: 2000px;
+}
+
+nav {
+  /* height: 4em; */
+  position: sticky;
+  top: 0;
+  text-align: center;
+  box-shadow: 0 4px 9px #4242421a;
+  transition: transform 250ms ease-in-out;
+  border-bottom: 1px solid #ddd;
+}
+
+nav.nav-bar--hidden {
+  transform: translateY(-100%);
+}
+
+main {
+  padding: 2em;
+}
+
+/* header */
+input{
+  font-family: inherit;
+}
+
