@@ -99,7 +99,7 @@ const SurpriseSlider = () => {
                 <div className='w-[85%] slider-container p-4'>
                     <Slider {...settings}>
                         {sliderData.map((item, index)=> (
-                            <div key={index} className="!flex flex-col items-center gap-8 bg-white rounded-lg px-2 py-6">
+                            <div key={index} className="!flex flex-col items-center gap-12 bg-white rounded-lg px-2 py-6">
                             <Image
                                 src={item.image}
                                 alt='prize'
