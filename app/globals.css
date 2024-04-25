@@ -173,3 +173,21 @@ input{
 .slick-track{
   display: flex !important;
 }
+
+.slick-slide{
+  margin: 0 10px;
+  min-width: 200px !important;
+}
+
+
+
+.triangle {
+  border-width: 25px;
+  border-style: solid;
+  border-color: #d72685 #d72685 transparent transparent;
+  position: absolute;
+  top:0;
+  right:0;
+  width:0;
+  height:0;
+}

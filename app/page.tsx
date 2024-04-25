@@ -6,6 +6,8 @@ import SurpriseSlider from "@/components/surpriseSlider/SurpriseSlider";
 import Category from "@/components/category/category";
 import Banners from "@/components/banners/banner";
 import PopularBrands from "@/components/popularBrands/popularBrands";
+import Cats from "@/components/cats/cats";
+import BestSell from "@/components/bestSell/bestSell";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Category />
       <Banners />
       <PopularBrands />
+      <Cats />
+      <BestSell />
       </main>
   );
 }
