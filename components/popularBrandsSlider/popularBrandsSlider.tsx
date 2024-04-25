@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Container from "../container/container";
 import Link from "next/link";
+import { shimmer, toBase64 } from "@/utils/shimmer";
 
 const popularBrands = [
     {image:"/brands/01.webp"},
@@ -38,10 +39,11 @@ const PopularBrandsSlider = () => {
                             <Link href="/" className="!flex !items-center justify-center cursor-pointer mx-6" key={index}>
                             <Image
                                 src={item.image}
+                                placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                                 alt='prize'
-                                width={180}
-                                height={200}
-                                className="w-[100px]"
+                                width={150}
+                                height={150}
+                                className="w-[100px] rounded-3xl"
                             />
                         </Link>
                         ))}

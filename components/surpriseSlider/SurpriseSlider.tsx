@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { ChevronLeft } from "lucide-react";
 import persianNumber from "@/utils/persianNumber"
+import { shimmer, toBase64 } from "@/utils/shimmer";
+
 
 const sliderData = [
     {
@@ -102,6 +104,7 @@ const SurpriseSlider = () => {
                             <div key={index} className="!flex flex-col items-center gap-12 bg-white rounded-lg px-2 py-6">
                             <Image
                                 src={item.image}
+                                placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                                 alt='prize'
                                 width={200}
                                 height={200}

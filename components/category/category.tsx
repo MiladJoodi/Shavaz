@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Container from "../container/container";
+import { shimmer, toBase64 } from "@/utils/shimmer";
+
 
 const categoryItems = [
     {
@@ -73,9 +75,10 @@ const Category = () => {
                                 <div className="relative w-[110px] h-[110px]">
                                     <Image
                                         src={`/category/` + item.image}
+                                        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                                         alt=""
                                         fill
-                                        className="hover:scale-110 transition-all duration-300 ease-in-out delay-150 cursor-pointer"
+                                        className="hover:scale-110 transition-all duration-300 ease-in-out delay-150 cursor-pointer rounded-full"
                                     />
                                 </div>
 

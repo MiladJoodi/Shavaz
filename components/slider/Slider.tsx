@@ -6,7 +6,14 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
+import { shimmer, toBase64 } from "@/utils/shimmer";
 
+const sliderItems = [
+    {image: "/aH1VurMyxmAzejiRMWv8kPTY3rOG985YdFu8b2tP.webp"},
+    {image: "/Q2Aap9zRdRaoM8jHRuDooBqsFdgQLFdddwlkDVIl.webp"},
+    {image: "/Vd8dzPKbkMYK8e5SXGadArtCS41FCVatWGgFRMD7.webp"},
+    {image: "/slider1.jpg"},
+]
 
 const Slider = () => {
     return (
@@ -19,9 +26,11 @@ const Slider = () => {
       className="mySwiper mt-6"
       autoplay={{ delay: 2000}}
       >
-        <SwiperSlide>
+        {sliderItems.map((slide, index)=>
+        <SwiperSlide key={index}>
             <Image
-            src="/aH1VurMyxmAzejiRMWv8kPTY3rOG985YdFu8b2tP.webp"
+            src={slide.image}
+            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
             width={1500}
             height={500}
             alt='slider1'
@@ -29,36 +38,9 @@ const Slider = () => {
             className='object-contain'
             />
         </SwiperSlide>
-        <SwiperSlide>
-            <Image
-            src="/Q2Aap9zRdRaoM8jHRuDooBqsFdgQLFdddwlkDVIl.webp"
-            width={1500}
-            height={500}
-            alt='slider1'
-            priority 
-            className='object-contain'
-            />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image
-            src="/Vd8dzPKbkMYK8e5SXGadArtCS41FCVatWGgFRMD7.webp"
-            width={1500}
-            height={500}
-            alt='slider1'
-            priority 
-            className='object-contain'
-            />
-        </SwiperSlide>
-        <SwiperSlide>
-        <Image
-            src="/slider1.jpg"
-            width={1500}
-            height={500}
-            alt='slider1'
-            priority
-            className='w-full'
-            />
-        </SwiperSlide>
+        )}
+        
+
       </Swiper>
     </>
     );

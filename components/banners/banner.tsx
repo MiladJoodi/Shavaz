@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "../container/container";
+import { shimmer, toBase64 } from "@/utils/shimmer";
 
 const Banners = () => {
     return (
@@ -9,18 +10,20 @@ const Banners = () => {
                     <div className="relative flex-1 w-full h-auto cursor-pointer">
                         <Image
                             src="/banner1.webp"
+                            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                             alt=""
                             width={1000}
-                            height={200}
+                            height={400}
                             className="rounded-xl"
                         />
                     </div>
                     <div className="relative flex-1 w-full h-auto cursor-pointer">
                         <Image
                             src="/banner2.webp"
+                            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                             alt=""
                             width={1000}
-                            height={200}
+                            height={400}
                             className="rounded-xl"
                         />
                     </div>
